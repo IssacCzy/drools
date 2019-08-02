@@ -1,0 +1,17 @@
+template header
+age
+sex
+
+package range;
+import com.oristar.vo.Person;
+
+template "issac_template"
+
+rule "issac_rule_@{row.rowNumber}"
+when
+    p:Person(age<@{age} && sex==@{sex});
+then
+    System.out.println("----------------");
+end
+
+end template

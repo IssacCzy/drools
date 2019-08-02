@@ -1,0 +1,37 @@
+template header
+
+rule
+accumulateFlag
+eventType
+ruleCode
+ruleId
+awardeeType
+priority
+beginTime
+endTime
+
+
+package com.oristar.enginer;
+
+
+import  com.oristar.util.ActivityContextUtil;
+import  com.oristar.domain.fact.RegisterFact;
+import  com.oristar.domain.fact.BaseFact;
+import  com.oristar.service.PrizeSendService;
+
+global com.oristar.domain.RuleExecuteGlobal globalParams;
+
+template "judge condition"
+
+rule "judge_@{ruleCode}"
+date-effective "@{beginTime}"
+date-expires "@{endTime}"
+when
+   @{eventType}(@{rule})
+then
+   //发奖品
+   ActivityContextUtil.getBean(PrizeSendService.class).sendAward(globalParams,@{awardeeType});
+   System.out.println("发送奖励" +  @{awardeeType});
+end
+
+end template
