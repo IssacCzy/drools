@@ -92,6 +92,19 @@
             <version>${drools.version}</version>
         </dependency>
 
+
+        <!-- junit test-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+
         <!-- thymeleaf模板插件 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
