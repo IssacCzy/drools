@@ -17,13 +17,15 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 
 /**
+ * 决策表使用 Demo
+ *
  * @Author Issac
  * @Description TODO
  * @Date 2019/8/5 13:25
  * @Version 1.0
  **/
-public class GenerationRulesTest {
-    private static final Logger logger = LoggerFactory.getLogger(GenerationRulesTest.class);
+public class DecisionTableRulesTest {
+    private static final Logger logger = LoggerFactory.getLogger(DecisionTableRulesTest.class);
 
     @Autowired
     KieContainer kieContainer;
