@@ -1,0 +1,16 @@
+package rules
+
+import com.oristar.vo.Person
+
+rule "check age3"
+	when
+		$person: Person(age > 20, age< 50)
+	then
+		$person.setDes("大于20 小于50");
+	end
+rule "check sex1"
+	when
+	    $person: Person(sex == 1)
+    then
+    	$person.setDes($person.getDes() + " boy!");
+	end

@@ -4,25 +4,13 @@ import com.oristar.vo.Person
 
 rule "check age1"
 	when
-		$person: Person(age <= 10)
+		$person: Person(age < 10)
 	then
-		$person.setDes("too yong");
+		$person.setDes("小于100岁");
 	end
 rule "check age2"
 	when
-		$person: Person(age > 10)
+		$person: Person(age > 10 , age <20)
 	then
-		$person.setDes("age is ok");
-	end
-rule "check sex1"
-	when
-	    $person: Person(sex == 1)
-    then
-    	$person.setDes($person.getDes() + " and is a boy!");
-	end
-rule "check sex2"
-	when
-	    $person: Person(sex != 1)
-    then
-    	$person.setDes($person.getDes() + " and is a girl!");
+		$person.setDes("大于10岁小于20岁");
 	end

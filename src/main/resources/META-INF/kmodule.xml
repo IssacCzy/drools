@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
     <!--定位规则，同时以rulesSession作为该规则入口-->
-    <kbase name="rules" packages="rules">
+    <kbase name="member_test_rules" packages="rules">
         <ksession name="rulesSession"/>
+    </kbase>
+
+    <!--决策表-->
+    <kbase name="decisionTable_test" packages="decisionTable">
+        <ksession name="PersonAgeKS"/>
     </kbase>
 
 </kmodule>

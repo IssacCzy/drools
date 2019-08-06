@@ -126,7 +126,7 @@ public class DoService {
         drl_rule_str.append("\r\n");
 
         /*导包部分*/
-        drl_rule_str.append("import com.oristar.vo.Person\r\n");
+        drl_rule_str.append("import com.oristar.vo.Student\r\n");
         drl_rule_str.append("\r\n");
 
         return dynamic_concat_rules(drl_rule_str);
@@ -141,7 +141,7 @@ public class DoService {
 
         /*规则条件部分*/
         rules_sb.append("\twhen\r\n");
-        rules_sb.append("\t\t$person: Person(age <= 10)\r\n");
+        rules_sb.append("\t\t$person: Student(age <= 10)\r\n");
 
         /*规则结果部分*/
         rules_sb.append("\tthen\r\n");
@@ -157,7 +157,7 @@ public class DoService {
 
         /*规则条件部分*/
         rules_sb.append("\twhen\r\n");
-        rules_sb.append("\t\t$person: Person(age > 10)\r\n");
+        rules_sb.append("\t\t$person: Student(age > 10)\r\n");
 
         /*规则结果部分*/
         rules_sb.append("\tthen\r\n");
