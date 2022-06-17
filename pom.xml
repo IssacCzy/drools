@@ -13,7 +13,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
         <drools.version>7.22.0.Final</drools.version>
-        <com.alibaba.fastjson.version>1.2.56</com.alibaba.fastjson.version>
+        <com.alibaba.fastjson.version>1.2.83</com.alibaba.fastjson.version>
     </properties>
     <!--父依赖关系-->
     <parent>
